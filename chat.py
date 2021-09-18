@@ -44,6 +44,7 @@ while True:
     tag = tags[predicted.item()]
 
     # get probability of tags
+    # if probability > 0.75 display a random response from the predicted tag
     probs = torch.softmax(output, dim =1)
     prob = probs[0][predicted.item()]
 
